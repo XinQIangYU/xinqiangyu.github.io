@@ -14,7 +14,7 @@
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI<p>
     <td width="30%">
-      <img src="/wenwen.jpeg" width="100%">      
+      <img src="/final_img.jpg" width="100%">      
     </td>
   </tr>
 </table>

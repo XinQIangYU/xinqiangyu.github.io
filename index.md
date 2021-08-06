@@ -2,7 +2,7 @@
     <tr>
     <td width="75%">
       <h1>Xinqiang Yu / 于新强</h1>
-      <h4>路漫漫兮其修远</h4>
+      <p>路漫漫兮其修远</p>
       <h2>Education Background</h2>
       <h4>Master's Degree Candidates :</h4>
       <p>Computer Application Technology,<p>

@@ -2,7 +2,7 @@
     <tr>
     <td width="75%">
       <h1>Xinqiang Yu / 于新强</h1>
-      <p>The way ahead is long and has no ending. Yet high and low I’ll search with my will unbending. / 路漫漫兮其修远,吾将上下而求索</p>
+      <p>The way ahead is long and has no ending. Yet high and low I’ll search with my will unbending.   /   路漫漫兮其修远,吾将上下而求索</p>
       <h4>Email：yuxinqiang21@mails.ucas.ac.cn</h4>
       <h2>Education Background</h2>
       <h4>Master's Degree Candidates :</h4>

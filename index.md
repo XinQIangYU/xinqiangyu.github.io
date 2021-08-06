@@ -2,7 +2,7 @@
     <tr>
     <td width="75%">
       <h1>Xinqiang Yu / 于新强</h1>
-      <p>路漫漫兮其修远</p>
+      <p>The road ahead will be long and our climb will be steep / 路漫漫兮其修远,吾将上下而求索</p>
       <h2>Education Background</h2>
       <h4>Master's Degree Candidates :</h4>
       <p>Computer Application Technology,<p>
@@ -14,6 +14,10 @@
       <p><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</p>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI<p>
+      </td>
+      <h2>Publications</h2>
+      <p>I will try my best to make this column is not blank as soon as possible.<p>
+      <h2>Future......<h2>
       </td>
     <td width="30%">
       <img src="/final_img.jpg" width="100%">      

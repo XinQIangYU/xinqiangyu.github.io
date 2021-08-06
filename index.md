@@ -1,4 +1,5 @@
 <table border="0">
+    <tr>
     <td width="75%">
       <h1>Xinqiang Yu / 于新强</h1>
       <h2>Education Background</h2>

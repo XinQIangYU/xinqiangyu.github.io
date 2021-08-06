@@ -13,10 +13,10 @@
         <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院/软件工程专业</a>)</p>
       <p><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</p>
       <h2>Research Interests</h2>
-      <p>Deep Learning / Computer Vision / Explainable AI<p>
+      <p>Deep Learning / Computer Vision / Explainable AI</p>
       <h2>Publications</h2>
-      <p>I will try my best to make this column is not blank as soon as possible.<p>
-      <h2>Future......<h2>
+      <p>I will try my best to make this column is not blank as soon as possible.</p>
+      <h2>Future......</h2>
     </td>
     <td width="30%">
       <img src="/final_img.jpg" width="100%">      

@@ -19,7 +19,7 @@
       <h2>Future......</h2>
     </td>
     <td width="30%">
-      <img src="/final_img.jpg" width="100%">      
+      <img src="/final_img.jpg" width="100%"/>      
     </td>
   </tr>
 </table>

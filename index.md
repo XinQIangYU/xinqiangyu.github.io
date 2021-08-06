@@ -11,7 +11,7 @@
       <h4>Bachelor Degree :</h4>
       <p>Software Engineering,</p>
       <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院/软件工程专业</a>)</p>
-      <h4><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</h4>
+      <h4>Email：yuxinqiang21@mails.ucas.ac.cn</h4>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI</p>
       <h2>Publications</h2>

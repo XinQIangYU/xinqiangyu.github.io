@@ -3,6 +3,7 @@
     <td width="75%">
       <h1>Xinqiang Yu / 于新强</h1>
       <p>The road ahead will be long and our climb will be steep / 路漫漫兮其修远,吾将上下而求索</p>
+      <h4>Email：yuxinqiang21@mails.ucas.ac.cn</h4>
       <h2>Education Background</h2>
       <h4>Master's Degree Candidates :</h4>
       <p>Computer Application Technology,</p>
@@ -11,7 +12,6 @@
       <h4>Bachelor Degree :</h4>
       <p>Software Engineering,</p>
       <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院/软件工程专业</a>)</p>
-      <h4>Email：yuxinqiang21@mails.ucas.ac.cn</h4>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI</p>
       <h2>Publications</h2>

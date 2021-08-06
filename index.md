@@ -14,11 +14,10 @@
       <p><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</p>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI<p>
-      </td>
       <h2>Publications</h2>
       <p>I will try my best to make this column is not blank as soon as possible.<p>
       <h2>Future......<h2>
-      </td>
+    </td>
     <td width="30%">
       <img src="/final_img.jpg" width="100%">      
     </td>

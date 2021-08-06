@@ -9,7 +9,7 @@
         <p>(<a href="http://www.ict.ac.cn">中国科学院计算技术研究所</a>)</p>
       <h4>Bachelor Degree :</h4>
       <p>Software Engineering,</p>
-        <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院</a>)</p>
+        <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院/软件工程专业</a>)</p>
       <p><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</p>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI<p>

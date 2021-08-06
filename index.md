@@ -5,13 +5,13 @@
       <p>The road ahead will be long and our climb will be steep / 路漫漫兮其修远,吾将上下而求索</p>
       <h2>Education Background</h2>
       <h4>Master's Degree Candidates :</h4>
-      <p>Computer Application Technology,<p>
+      <p>Computer Application Technology,</p>
       <p>Institute of Computing Technology(ICT), Chinese Academy of Sciences(CAS)</p>
-        <p>(<a href="http://www.ict.ac.cn">中国科学院计算技术研究所</a>)</p>
+      <p>(<a href="http://www.ict.ac.cn">中国科学院计算技术研究所</a>)</p>
       <h4>Bachelor Degree :</h4>
       <p>Software Engineering,</p>
-        <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院/软件工程专业</a>)</p>
-      <p><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</p>
+      <p>Liaoning Technical University(<a href="https://www.lntu.edu.cn">辽宁工程技术大学</a> , <a href="https://rjxy.lntu.edu.cn">软件学院/软件工程专业</a>)</p>
+      <h4><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</h4>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI</p>
       <h2>Publications</h2>

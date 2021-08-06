@@ -13,7 +13,6 @@
       <p><b>Email：</b>yuxinqiang21@mails.ucas.ac.cn</p>
       <h2>Research Interests</h2>
       <p>Deep Learning / Computer Vision / Explainable AI<p>
-    </td>
     <td width="30%">
       <img src="/wenwen.jpeg" width="100%">      
     </td>

@@ -1,13 +1,17 @@
 :root {
-  --ink: #1c2430;
-  --muted: #5b6573;
-  --line: #e6ebf0;
-  --paper: #f6f7f9;
-  --card: #ffffff;
-  --accent: #1f4d63;
-  --accent-soft: #e8f1f4;
-  --chip: #f3f5f7;
+  --paper: #e8dfd2;
+  --card: #fffdf8;
+  --ink: #1a1612;
+  --body: #322c25;
+  --muted: #72685c;
+  --line: #d8c8b3;
+  --link: #b4411b;
+  --link-hover: #7d2c12;
+  --accent: #1f6b6b;
+  --accent-soft: #e7f2f1;
+  --chip: #fff7ee;
   --good: #9b1d2e;
+  --shadow: rgba(42, 32, 22, 0.1);
 }
 
 * { box-sizing: border-box; }
@@ -15,15 +19,34 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(900px 460px at 0% -8%, rgba(180, 65, 27, 0.08), transparent 55%),
+    radial-gradient(760px 420px at 100% 0%, rgba(31, 107, 107, 0.07), transparent 50%);
+  color: var(--body);
   font-family: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16.5px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: var(--link);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(180, 65, 27, 0.42);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.bio a,
+.paper-links a {
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+}
 
 .page {
   max-width: 980px;
@@ -38,23 +61,28 @@ a:hover { text-decoration: underline; }
   align-items: start;
   background: var(--card);
   border: 1px solid var(--line);
+  border-top: 3px solid var(--link);
   border-radius: 16px;
   padding: 28px 28px 24px;
-  box-shadow: 0 10px 28px rgba(28, 36, 48, 0.05);
+  box-shadow: 0 12px 32px var(--shadow);
 }
 
 .name {
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 4vw, 40px);
+  font-size: clamp(32px, 4vw, 42px);
   font-weight: 600;
-  line-height: 1.2;
-  margin: 0 0 6px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 4px;
 }
 
 .cname {
-  color: var(--muted);
-  font-size: 18px;
-  margin: 0 0 16px;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--accent);
+  margin: 0 0 18px;
 }
 
 .bio p {
@@ -74,13 +102,14 @@ a:hover { text-decoration: underline; }
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 7px 12px;
+  padding: 7px 13px;
   border-radius: 999px;
   background: var(--chip);
-  border: 1px solid var(--line);
-  color: var(--ink);
+  border: 1px solid #d7a08a;
+  color: var(--link);
   font-weight: 600;
   font-size: 14.5px;
+  text-decoration: none;
 }
 
 button.chip {
@@ -89,14 +118,19 @@ button.chip {
 }
 
 .chip:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--link);
+  border-color: var(--link);
   color: #fff;
   text-decoration: none;
 }
 
 .portrait {
   text-align: center;
+}
+
+.portrait a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .portrait img.me {
@@ -107,6 +141,7 @@ button.chip {
   border-radius: 12px;
   border: 1px solid var(--line);
   background: #fff;
+  box-shadow: 0 8px 20px var(--shadow);
 }
 
 .wechat-modal {
@@ -117,7 +152,7 @@ button.chip {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgba(28, 36, 48, 0.45);
+  background: rgba(26, 22, 18, 0.48);
 }
 
 .wechat-modal[hidden] { display: none; }
@@ -125,16 +160,18 @@ button.chip {
 .wechat-dialog {
   position: relative;
   width: min(320px, 100%);
-  background: #fff;
+  background: var(--card);
   border-radius: 16px;
   padding: 22px 20px 18px;
   text-align: center;
-  box-shadow: 0 16px 40px rgba(28, 36, 48, 0.2);
+  box-shadow: 0 16px 40px rgba(26, 22, 18, 0.22);
 }
 
 .wechat-dialog p {
   margin: 0 0 12px;
+  font-family: "Source Serif 4", Georgia, serif;
   font-weight: 700;
+  color: var(--ink);
 }
 
 .wechat-dialog img {
@@ -163,21 +200,32 @@ button.chip {
 }
 
 section {
-  margin-top: 34px;
+  margin-top: 38px;
 }
 
 h2 {
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: 24px;
-  margin: 0 0 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--line);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 6px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  margin-top: 10px;
+  background: var(--link);
 }
 
 .hint {
   color: var(--muted);
   font-size: 14.5px;
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
 .paper {
@@ -194,7 +242,7 @@ h2 {
 }
 
 .paper:hover {
-  box-shadow: 0 10px 24px rgba(28, 36, 48, 0.07);
+  box-shadow: 0 12px 26px var(--shadow);
   transform: translateY(-1px);
 }
 
@@ -204,14 +252,16 @@ h2 {
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid var(--line);
-  background: #f3f5f7;
+  background: #f3eee6;
 }
 
 .papertitle {
   display: block;
-  font-weight: 700;
-  font-size: 16.5px;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 17.5px;
   line-height: 1.4;
+  color: var(--ink);
   margin-bottom: 6px;
 }
 
@@ -221,7 +271,7 @@ h2 {
   font-size: 14.5px;
 }
 
-.paper-authors strong { color: var(--ink); }
+.paper-authors strong { color: var(--ink); font-weight: 700; }
 
 .venue {
   color: var(--accent);
@@ -258,7 +308,12 @@ h2 {
   padding: 14px 16px;
 }
 
-.award b { display: block; }
+.award b {
+  display: block;
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
 .award span { color: var(--muted); font-size: 14.5px; }
 .award .hot { color: var(--good); font-weight: 700; }
 

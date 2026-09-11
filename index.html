@@ -1,553 +1,254 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Xinqiang Yu | 于新强</title>
-  
-  <meta name="author" content="Xinqiang Yu">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>Xinqiang Yu | 于新强</title>
+  <meta name="author" content="Xinqiang Yu">
+  <meta name="description" content="Personal homepage of Xinqiang Yu, a jointly trained PhD candidate working on dexterous manipulation, 3D vision, and multimodal models.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,560;8..60,650&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p class="name" style="text-align: center;">
-                Xinqiang Yu | 于新强
-              </p>
-              Now, I am a jointly trained PhD candidate, supervised by <a href="https://hughw19.github.io"> Prof. He Wang </a> (Peking University, Galbot) and <a href="https://zhaoxiangzhang.net"> Prof. Zhaoxiang Zhang </a> (Institute of Automation, Chinese Academy of Sciences). And I am also honored to have received guidance from <a href="https://ericyi.github.io/"> Prof. Li Yi</a> (Tsinghua University, Galbot).
-            <br><br>
-            Before that, I obtained my B.S. in <a href="https://rjxy.lntu.edu.cn">Software Engineering from Liaoning Technical University</a>, supervised by <a href="https://rjxy.lntu.edu.cn/info/1125/1696.htm">Prof. Haicheng Qu</a>.
-            And I got my master degree from <a href="http://www.ict.ac.cn">Institute of Computing Technology, Chinese Academy of Sciences</a>, supervised by <a href="https://winycg.github.io">Prof. Chuanguang Yang</a>, Prof. Zhulin An and Prof. Yongjun Xu.
-            <br><br>
-            My research focuses on Dexterous Manipulation(VLM, WAM and Tactile-Driven), 3D Computer Vision and Multimodal Large Language Models.
-            <br><br>
-            
-          </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/me.jpg"><img style="width:70%;max-width:70%" alt="profile photo" src="images/me.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2>Publications</h2>
+  <div class="page">
+    <header class="hero">
+      <div class="bio">
+        <h1 class="name">Xinqiang Yu</h1>
+        <p class="cname">于新强</p>
+        <p>Now, I am a jointly trained PhD candidate, supervised by <a href="https://hughw19.github.io">Prof. He Wang</a> (Peking University, Galbot) and <a href="https://zhaoxiangzhang.net">Prof. Zhaoxiang Zhang</a> (Institute of Automation, Chinese Academy of Sciences). I am also honored to have received guidance from <a href="https://ericyi.github.io/">Prof. Li Yi</a> (Tsinghua University, Galbot).</p>
+        <p>Before that, I obtained my B.S. in <a href="https://rjxy.lntu.edu.cn">Software Engineering from Liaoning Technical University</a>, supervised by <a href="https://rjxy.lntu.edu.cn/info/1125/1696.htm">Prof. Haicheng Qu</a>. I received my master’s degree from the <a href="http://www.ict.ac.cn">Institute of Computing Technology, Chinese Academy of Sciences</a>, supervised by <a href="https://winycg.github.io">Prof. Chuanguang Yang</a>, Prof. Zhulin An and Prof. Yongjun Xu.</p>
+        <p>My research focuses on Dexterous Manipulation (VLM, WAM and Tactile-Driven), 3D Computer Vision and Multimodal Large Language Models.</p>
+        <div class="contacts">
+          <a class="chip" href="https://scholar.google.com/citations?user=sD_nRaoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="chip" href="https://github.com/XinQIangYU" target="_blank" rel="noopener">GitHub</a>
+          <a class="chip" href="#wechat">WeChat</a>
+        </div>
+      </div>
+      <aside class="portrait">
+        <a href="images/me.jpg"><img class="me" src="images/me.jpg" alt="Portrait of Xinqiang Yu"></a>
+        <div class="wechat-card" id="wechat">
+          <img src="images/wechat.jpg" alt="WeChat QR code of Xinqiang Yu">
+          <span>Scan to add me on WeChat</span>
+        </div>
+      </aside>
+    </header>
 
-              <p> *: equal contribution; †: corresponding author(s)</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <!---->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/UniPart.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-          UniPart: Towards Zero-shot Language-Grounded 3D Part Segmentation for Embodied Interaction
-          </span>
-        <br>
-        <strong>Xinqiang Yu</strong>*,
-        <a href="">Zekun qi</a>*,
-        <a href="">Jiawei He</a>,
-        <a href="">Wenyao Zhang</a>,
-        <a href="">Xuchuan Chen</a>,
-        <a href="">Guocai Yao</a>,
-        <a href="">Li Yi</a>,
-        <a href="">Zhaoxiang Zhang</a>,
-        <a href="">He Wang</a>
-        <br>
-        <em>ECCV 2026</em>
-        <br>
-        <a href="https://xinqiangyu.github.io/UniPart/">project page</a>
-        <p></p>
-      </td>
-    <!---->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/HuamnTracker.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark
-          </span>
-        <br>
-        <a href="">Dairu Liu</a>*,
-        <a href="">Zekun qi</a>*,
-        <a href="">Jiayu Zeng</a>,
-        <a href="">Yu Guan</a>,
-        <a href="">Chenghuai Lin</a>,
-        <a href="">Xuchuan Chen</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">Wenyao Zhang</a>,
-        <a href="">He Wang</a>,
-        <a href="">Li Yi</a>
-        <br>
-        <em>ECCV 2026</em>
-        <p></p>
-      </td>
-      <!---->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/humanoidgpt.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking
-          </span>
-        <br>
-        <a href="">Zekun Qi</a>*,
-        <a href="">Xuchuan Chen</a>*,
-        <a href="">Jilong Wang</a>*,
-        <a href="">Chenghuai Lin</a>*,
-        <a href="">Yunrui Lian</a>,
-        <a href="">Wenyao Zhang</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">He Wang</a>,
-        <a href="">Li Yi</a>
-        <br>
-        <em>CVPR 2026</em>
-        <a href="https://arxiv.org/pdf/2606.03985">paper</a> 
-        <p></p>
-      </td>
-    <!---->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/limmit.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            LIMMT: Less Is More for Motion Tracking
-          </span>
-        <br>
-        <a href="">Yu Guan</a>*,
-        <a href="">Zekun qi</a>*,
-        <a href="">Chenghuai Lin</a>*,
-        <a href="">Xuchuan Chen</a>*,
-        <a href="">Dairu Liu</a>*,
-        <a href="">Wenyao Zhang</a>,
-        <a href="">Jilong Wang</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">He Wang</a>
-        <a href="">Li Yi</a>,
-        <br>
-        <em>ICML 2026</em>
-        <p></p>
-      </td>
-    <!---->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/v2t.png' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            Vision to Touch: Generalizable Insertion via Real-World Tactile Reinforcement Learning
-          </span>
-        <br>
-        <strong>Xinqiang Yu</strong>,
-        <a href="">Yuxuan Wan</a>,
-        <a href="">Zekun Qi</a>,
-        <a href="">Weiheng Liu</a>,
-        <a href="">Wenyao Zhang</a>,
-        <a href="">Bowen Xiao</a>,
-        <a href="">Yu Guan</a>,
-        <a href="">Xuchuan Chen</a>,
-        <a href="">Zhizheng Zhang</a>,
-        <a href="">Li Yi</a>,
-        <a href="">Zhaoxiang Zhang</a>,
-        <a href="">He Wang</a>
-        <br>
-        <em>UnderReview</em>
-        <p></p>
-      </td>
+    <section>
+      <h2>Publications</h2>
+      <p class="hint">*: equal contribution; †: corresponding author(s)</p>
 
-     <!---->
-     <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/da_nav.png' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-          DA-Nav: Direction-Aware City-Scale Vision-Language Naviga
-          </span>
-        <br>
-        <a href="">Ye Yuan</a>*,
-        <a href="">Kehan Chen</a>*,
-        <strong>Xinqiang Yu</strong>*,
-        <a href="">Jiawei He</a>,
-        <a href="">Yan Huang</a>,
-        <a href="">Zhulin An</a>,
-        <br>
-        <em>UnderReview</em>
-		  <a href="https://arxiv.org/pdf/2607.11638">paper</a> 
-        <p></p>
-      </td> 
+      <article class="paper">
+        <img class="thumb" src="images/UniPart.jpg" alt="UniPart">
+        <div>
+          <span class="papertitle">UniPart: Towards Zero-shot Language-Grounded 3D Part Segmentation for Embodied Interaction</span>
+          <p class="paper-authors"><strong>Xinqiang Yu</strong>*, Zekun Qi*, Jiawei He, Wenyao Zhang, Xuchuan Chen, Guocai Yao, Li Yi, Zhaoxiang Zhang, He Wang</p>
+          <p class="paper-meta"><span class="venue">ECCV 2026</span></p>
+          <p class="paper-links"><a href="https://xinqiangyu.github.io/UniPart/">project page</a></p>
+        </div>
+      </article>
 
-    <!-- fenge -->
-     <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/dreamvla.png' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-          DreamVLA: Dream Comprehensive World Knowledge for Vision-Language-Action Model 
-          </span>
-        <br>
-        <a href="">Wenyao Zhang</a>*,
-        <a href="">Hongsi Liu</a>*,
-        <a href="">Zekun Qi</a>*,
-        <a href="">Yunnan Wang</a>*,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">Jiazhao Zhang</a>,
-        <a href="">Runpei Dong</a>,
-	<a href="">Jiawei He</a>,
-	<a href="">Zhizheng Zhang</a>,
-	<a href="">He Wang</a>,
-	<a href="">Li Yi</a>,
-	<a href="">Wenjun Zeng</a>,
-	<a href="">Xin Jin</a>,
-  <br>
-  <em>NeurIPS 2025</em>,
-        <a href="https://arxiv.org/abs/2507.04447">paper</a> 
-        <p></p>
-      </td>
+      <article class="paper">
+        <img class="thumb" src="images/HuamnTracker.jpg" alt="HumanTracker">
+        <div>
+          <span class="papertitle">HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark</span>
+          <p class="paper-authors">Dairu Liu*, Zekun Qi*, Jiayu Zeng, Yu Guan, Chenghuai Lin, Xuchuan Chen, <strong>Xinqiang Yu</strong>, Wenyao Zhang, He Wang, Li Yi</p>
+          <p class="paper-meta"><span class="venue">ECCV 2026</span></p>
+        </div>
+      </article>
 
+      <article class="paper">
+        <img class="thumb" src="images/humanoidgpt.jpg" alt="Humanoid-GPT">
+        <div>
+          <span class="papertitle">Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking</span>
+          <p class="paper-authors">Zekun Qi*, Xuchuan Chen*, Jilong Wang*, Chenghuai Lin*, Yunrui Lian, Wenyao Zhang, <strong>Xinqiang Yu</strong>, He Wang, Li Yi</p>
+          <p class="paper-meta"><span class="venue">CVPR 2026</span></p>
+          <p class="paper-links"><a href="https://arxiv.org/pdf/2606.03985">paper</a></p>
+        </div>
+      </article>
 
-	<tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/eat_teaser.png' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-          Embodied intelligence: Recent advances and future perspectives
-          </span>
-        <br>
-        <a>Zhulin An</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a>Chu Wang†</a>,
-		<a>Yinlong Zhang</a>,
-		<a>Chunhe Song†</a>,
-        <br>
-        <em>The Innovation Informatics</em>
-		  <a href="https://www.the-innovation.org/article/doi/10.59717/j.xinn-inform.2025.100008">paper</a>
-        <br>
-        <p></p>
-      </td>
-    </tr>
-    <!-- fenge -->
-			
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/dexvlg.png' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-          DexVLG: Dexterous Vision-Language-Grasp Model at Scale
-          </span>
-        <br>
-        <a href="https://jiaweihe.com">Jiawei He</a>*,
-        <a href="https://danshi-li.github.io/personal-website/">Danshi Li</a>*,
-        <strong>Xinqiang Yu</strong>*,
-        <a ref="https://qizekun.github.io/">Zekun Qi</a>,
-        <a href="">Wenyao zhang</a>,
-        <a href="https://jychen18.github.io">Jiayi Chen</a>, 
-        <a href="https://zhaoxiangzhang.net">Zhaoxiang Zhang</a>,
-        <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a>,
-        <a href="https://ericyi.github.io/">Li Yi</a>,
-        <a href="https://hughw19.github.io/">He Wang†</a>
-        <br>
-        <em>ICCV 2025</em>
-		  <a href="https://arxiv.org/abs/2507.02747">paper</a>
-        <br>
-        <p></p>
-      </td>
-    </tr>
-    <!-- fenge -->
+      <article class="paper">
+        <img class="thumb" src="images/limmit.jpg" alt="LIMMT">
+        <div>
+          <span class="papertitle">LIMMT: Less Is More for Motion Tracking</span>
+          <p class="paper-authors">Yu Guan*, Zekun Qi*, Chenghuai Lin*, Xuchuan Chen*, Dairu Liu*, Wenyao Zhang, Jilong Wang, <strong>Xinqiang Yu</strong>, He Wang, Li Yi</p>
+          <p class="paper-meta"><span class="venue">ICML 2026</span></p>
+        </div>
+      </article>
 
-         <tr class="paper-row">
-          <td style="padding:10px;width:30%;vertical-align:middle">
-            <img src='images/DexGraspNet2.png' width="100%">
-          </td>
-          <td style="padding:20px;width:70%;vertical-align:middle">
-              <span class="papertitle">
-                DexGraspNet 2.0: Learning Generative Dexterous Grasping in Large-scale Synthetic Cluttered Scenes
-              </span>
-            <br>
-            <a href="https://mzhmxzh.github.io/">Jialiang Zhang*</a>,
-            <a href="https://lhrrhl0419.github.io/">Haoran Liu*</a>,
-            <a href="https://danshi-li.github.io/personal-website/">Danshi Li*</a>,
-            <strong>Xinqiang Yu*</strong>,
-            <a href="https://geng-haoran.github.io">Haoran Geng</a>,
-            <a href="https://selina2023.github.io">Yufei Ding</a>,
-            <a href="https://jychen18.github.io">Jiayi Chen</a>, 
-            <a href="https://hughw19.github.io/">He Wang†</a>
-            <br>
-            <em>CoRL</em>, 2024
-            <br>
+      <article class="paper">
+        <img class="thumb" src="images/v2t.png" alt="Vision to Touch">
+        <div>
+          <span class="papertitle">Vision to Touch: Generalizable Insertion via Real-World Tactile Reinforcement Learning</span>
+          <p class="paper-authors"><strong>Xinqiang Yu</strong>, Yuxuan Wan, Zekun Qi, Weiheng Liu, Wenyao Zhang, Bowen Xiao, Yu Guan, Xuchuan Chen, Zhizheng Zhang, Li Yi, Zhaoxiang Zhang, He Wang</p>
+          <p class="paper-meta"><span class="venue">Under review</span></p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <img class="thumb" src="images/da_nav.png" alt="DA-Nav">
+        <div>
+          <span class="papertitle">DA-Nav: Direction-Aware City-Scale Vision-Language Navigation</span>
+          <p class="paper-authors">Ye Yuan*, Kehan Chen*, <strong>Xinqiang Yu</strong>*, Jiawei He, Yan Huang, Zhulin An</p>
+          <p class="paper-meta"><span class="venue">Under review</span></p>
+          <p class="paper-links"><a href="https://arxiv.org/pdf/2607.11638">paper</a></p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <img class="thumb" src="images/dreamvla.png" alt="DreamVLA">
+        <div>
+          <span class="papertitle">DreamVLA: Dream Comprehensive World Knowledge for Vision-Language-Action Model</span>
+          <p class="paper-authors">Wenyao Zhang*, Hongsi Liu*, Zekun Qi*, Yunnan Wang*, <strong>Xinqiang Yu</strong>, Jiazhao Zhang, Runpei Dong, Jiawei He, Zhizheng Zhang, He Wang, Li Yi, Wenjun Zeng, Xin Jin</p>
+          <p class="paper-meta"><span class="venue">NeurIPS 2025</span></p>
+          <p class="paper-links"><a href="https://arxiv.org/abs/2507.04447">paper</a></p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <img class="thumb" src="images/eat_teaser.png" alt="Embodied intelligence">
+        <div>
+          <span class="papertitle">Embodied intelligence: Recent advances and future perspectives</span>
+          <p class="paper-authors">Zhulin An, <strong>Xinqiang Yu</strong>, Chu Wang†, Yinlong Zhang, Chunhe Song†</p>
+          <p class="paper-meta"><span class="venue">The Innovation Informatics</span></p>
+          <p class="paper-links"><a href="https://www.the-innovation.org/article/doi/10.59717/j.xinn-inform.2025.100008">paper</a></p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <img class="thumb" src="images/dexvlg.png" alt="DexVLG">
+        <div>
+          <span class="papertitle">DexVLG: Dexterous Vision-Language-Grasp Model at Scale</span>
+          <p class="paper-authors"><a href="https://jiaweihe.com">Jiawei He</a>*, <a href="https://danshi-li.github.io/personal-website/">Danshi Li</a>*, <strong>Xinqiang Yu</strong>*, <a href="https://qizekun.github.io/">Zekun Qi</a>, Wenyao Zhang, <a href="https://jychen18.github.io">Jiayi Chen</a>, <a href="https://zhaoxiangzhang.net">Zhaoxiang Zhang</a>, <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a>, <a href="https://ericyi.github.io/">Li Yi</a>, <a href="https://hughw19.github.io/">He Wang†</a></p>
+          <p class="paper-meta"><span class="venue">ICCV 2025</span></p>
+          <p class="paper-links"><a href="https://arxiv.org/abs/2507.02747">paper</a></p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <img class="thumb" src="images/DexGraspNet2.png" alt="DexGraspNet 2.0">
+        <div>
+          <span class="papertitle">DexGraspNet 2.0: Learning Generative Dexterous Grasping in Large-scale Synthetic Cluttered Scenes</span>
+          <p class="paper-authors"><a href="https://mzhmxzh.github.io/">Jialiang Zhang</a>*, <a href="https://lhrrhl0419.github.io/">Haoran Liu</a>*, <a href="https://danshi-li.github.io/personal-website/">Danshi Li</a>*, <strong>Xinqiang Yu</strong>*, <a href="https://geng-haoran.github.io">Haoran Geng</a>, <a href="https://selina2023.github.io">Yufei Ding</a>, <a href="https://jychen18.github.io">Jiayi Chen</a>, <a href="https://hughw19.github.io/">He Wang†</a></p>
+          <p class="paper-meta"><span class="venue">CoRL 2024</span></p>
+          <p class="paper-links">
             <a href="https://pku-epic.github.io/DexGraspNet2.0/">project page</a> /
             <a href="https://arxiv.org/abs/2410.23004">arXiv</a> /
             <a href="https://github.com/PKU-EPIC/DexGraspNet2">code</a>
-            <p></p>
-          </td>
-       </tr>
+          </p>
+        </div>
+      </article>
 
+      <article class="paper">
+        <img class="thumb" src="images/MTKD_RL.png" alt="MTKD-RL">
+        <div>
+          <span class="papertitle">Multi-Teacher Knowledge Distillation with Reinforcement Learning for Visual Recognition</span>
+          <p class="paper-authors"><a href="https://winycg.github.io">Chuanguang Yang</a>, <strong>Xinqiang Yu</strong>, Han Yang, Zhulin An, Chengqing Yu, Libo Huang, Yongjun Xu</p>
+          <p class="paper-meta"><span class="venue">AAAI 2025</span> <span class="tag">Oral</span></p>
+          <p class="paper-links">
+            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32990/35145">paper</a> /
+            <a href="https://github.com/winycg/MTKD-RL">code</a>
+          </p>
+        </div>
+      </article>
 
-      <!-- fenge -->
-       <tr class="paper-row">
-        <td style="padding:10px;width:30%;vertical-align:middle">
-          <img src='images/MTKD_RL.png' width="100%">
-        </td>
-        <td style="padding:20px;width:70%;vertical-align:middle">
-            <span class="papertitle">
-              Multi-Teacher Knowledge Distillation with Reinforcement Learning for Visual Recognition
-            </span>
-          <br>
-          <a href="winycg.github.io">Chuanguang Yang</a>,
-          <strong>Xinqiang Yu</strong>,
-          <a href="">Han Yang</a>,
-          <a href="">Zhulin An</a>,
-          <a href="">Chengqing Yu</a>,
-          <a href="">Libo Huang</a>,
-          <a href="">Yongjun Xu</a>,
+      <article class="paper">
+        <img class="thumb" src="images/OPD.jpg" alt="Online Policy Distillation">
+        <div>
+          <span class="papertitle">Online Policy Distillation with Decision-Attention</span>
+          <p class="paper-authors"><strong>Xinqiang Yu</strong>, <a href="https://winycg.github.io">Chuanguang Yang</a>, Chengqing Yu, Libo Huang, Zhulin An, Yongjun Xu</p>
+          <p class="paper-meta"><span class="venue">IJCNN 2024</span></p>
+          <p class="paper-links"><a href="https://arxiv.org/pdf/2406.05488">paper</a></p>
+        </div>
+      </article>
 
-          <br>
-          <em>AAAI</em>, 2025, <font color="red">Oral</font>
-          <br>
-          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32990/35145">paper</a> /
-          <a href="https://github.com/winycg/MTKD-RL">code</a>
-          <p></p>
-        </td>
-     </tr>
+      <article class="paper">
+        <img class="thumb" src="images/sofar.png" alt="SoFar">
+        <div>
+          <span class="papertitle">SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation</span>
+          <p class="paper-authors"><a href="https://qizekun.github.io/">Zekun Qi</a>*, Wenyao Zhang*, <a href="https://selina2023.github.io/">Yufei Ding</a>*, <a href="https://runpeidong.web.illinois.edu/">Runpei Dong</a>, <strong>Xinqiang Yu</strong>, Jingwen Li, Lingyun Xu, <a href="https://baoyuli.github.io/">Baoyu Li</a>, <a href="https://xialin-he.github.io/">Xialin He</a>, <a href="https://github.com/Asterisci/">Guofan Fan</a>, <a href="https://jzhzhang.github.io/">Jiazhao Zhang</a>, <a href="https://jiaweihe.com">Jiawei He</a>, Jiayuan Gu, <a href="http://home.ustc.edu.cn/~jinxustc/">Xin Jin</a>, <a href="http://group.iiis.tsinghua.edu.cn/~maks/leader.html">Kaisheng Ma</a>, <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a>, <a href="https://hughw19.github.io/">He Wang</a>, <a href="https://ericyi.github.io/">Li Yi</a></p>
+          <p class="paper-meta"><span class="venue">Under review</span></p>
+          <p class="paper-links">
+            <a href="https://qizekun.github.io/sofar/">project page</a> /
+            <a href="https://arxiv.org/abs/2502.13143">arXiv</a> /
+            <a href="https://github.com/qizekun/SoFar">code</a> /
+            <a href="https://huggingface.co/collections/qizekun/sofar-67b511129d3146d28cea9920">huggingface</a>
+          </p>
+        </div>
+      </article>
 
+      <article class="paper">
+        <img class="thumb" src="images/omnispatial.jpg" alt="OmniSpatial">
+        <div>
+          <span class="papertitle">OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models</span>
+          <p class="paper-authors">Mengdi Jia*, <a href="https://qizekun.github.io">Zekun Qi</a>*, Shaochen Zhang, Wenyao Zhang, <strong>Xinqiang Yu</strong>, <a href="https://jiaweihe.com">Jiawei He</a>, <a href="https://hughw19.github.io/">He Wang</a>, <a href="https://ericyi.github.io/">Li Yi</a></p>
+          <p class="paper-meta"><span class="venue">Under review</span></p>
+          <p class="paper-links">
+            <a href="https://qizekun.github.io/omnispatial/">project page</a> /
+            <a href="https://arxiv.org/abs/2506.03135">arXiv</a> /
+            <a href="https://github.com/qizekun/OmniSpatial">code</a> /
+            <a href="https://huggingface.co/datasets/qizekun/OmniSpatial">huggingface</a>
+          </p>
+        </div>
+      </article>
 
-     <!-- fenge -->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/OPD.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            Online Policy Distillation with Decision-Attention
-          </span>
-        <br>
-        <strong>Xinqiang Yu</strong>,
-        <a href="winycg.github.io">Chuanguang Yang</a>,
-        <a href="">Chengqing Yu</a>,
-        <a href="">Libo Huang</a>,
-        <a href="">Zhulin An</a>,
-        <a href="">Yongjun Xu</a>,
+      <article class="paper">
+        <img class="thumb" src="images/Springer_2023_survey.jpg" alt="Knowledge distillation survey">
+        <div>
+          <span class="papertitle">Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation</span>
+          <p class="paper-authors"><a href="https://winycg.github.io">Chuanguang Yang</a>, <strong>Xinqiang Yu</strong>, Zhulin An, Yongjun Xu</p>
+          <p class="paper-meta"><span class="venue">Springer Book Chapter</span> <span class="tag">Invited</span></p>
+          <p class="paper-links">
+            <a href="https://arxiv.org/pdf/2306.10687.pdf">arXiv</a> /
+            <a href="https://link.springer.com/book/10.1007/978-3-031-32095-8">book</a>
+          </p>
+        </div>
+      </article>
 
-        <br>
-        <em>IJCNN</em>, 2024
-        <br>
-        <a href="https://arxiv.org/pdf/2406.05488">Paper</a>
-        <p></p>
-      </td>
-    </tr>
+      <article class="paper">
+        <img class="thumb" src="images/CLIP_KD.jpg" alt="CLIP-KD">
+        <div>
+          <span class="papertitle">CLIP-KD: An Empirical Study of CLIP Model Distillation</span>
+          <p class="paper-authors"><a href="https://winycg.github.io">Chuanguang Yang</a>, Zhulin An, Libo Huang, Junyu Bi, <strong>Xinqiang Yu</strong>, Han Yang, Boyu Diao, Yongjun Xu</p>
+          <p class="paper-meta"><span class="venue">CVPR 2024</span></p>
+          <p class="paper-links">
+            <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_CLIP-KD_An_Empirical_Study_of_CLIP_Model_Distillation_CVPR_2024_paper.pdf">paper</a> /
+            <a href="https://github.com/winycg/CLIP-KD">code</a>
+          </p>
+        </div>
+      </article>
 
-      <!-- fenge -->
-      <tr class="paper-row">
-        <td style="padding:10px;width:30%;vertical-align:middle">
-          <img src='images/sofar.png' width="100%">
-        </td>
-        <td style="padding:20px;width:70%;vertical-align:middle">
-            <span class="papertitle">
-              SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation
-            </span>
-          <br>
-          <a ref="https://qizekun.github.io/">Zekun Qi</a> *,
-          <a href="">Wenyao Zhang</a> *, 
-          <a href="https://selina2023.github.io/">Yufei Ding</a> *, 
-          <a href="https://runpeidong.web.illinois.edu/">Runpei Dong</a>,
-          <strong>Xinqiang Yu</strong>,
-          <a href="">Jingwen Li</a>,
-          <a hferf="">Lingyun Xu</a>,
-          <a href="https://baoyuli.github.io/">Baoyu Li</a>,
-          <a href="https://xialin-he.github.io/">Xialin He</a>,
-          <a href="https://github.com/Asterisci/">Guofan Fan</a>,
-          <a href="https://jzhzhang.github.io/">Jiazhao Zhang</a>,
-          <a href="https://jiaweihe.com">Jiawei He</a>,
-          <a href="https://hughw19.github.io/">Jiayuan Gu</a>
-          <a href="http://home.ustc.edu.cn/~jinxustc/">Xin Jin</a>
-          <a href="http://group.iiis.tsinghua.edu.cn/~maks/leader.html">Kaisheng Ma</a>
-          <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a>
-          <a href="https://hughw19.github.io/">He Wang</a>
-          <a href="https://ericyi.github.io/">Li Yi</a>
-          <br>
-          <em>Under review</em>
-          <br>
-          <a href="https://qizekun.github.io/sofar/">project page</a> /
-          <a href="https://arxiv.org/abs/2502.13143">arXiv</a> /
-          <a href="https://github.com/qizekun/SoFar">code</a> /
-          <a href="https://huggingface.co/collections/qizekun/sofar-67b511129d3146d28cea9920">huggingface</a>
-          <p></p>
-        </td>
-     </tr>
+      <article class="paper">
+        <img class="thumb" src="images/IL.png" alt="Incremental Representation">
+        <div>
+          <span class="papertitle">Exemplar-Free Class Incremental Learning via Incremental Representation</span>
+          <p class="paper-authors">Libo Huang, Zhulin An, Yan Zeng, Chuanguang Yang, <strong>Xinqiang Yu</strong>, Yongjun Xu</p>
+          <p class="paper-links"><a href="https://arxiv.org/pdf/2403.16221">paper</a></p>
+        </div>
+      </article>
+    </section>
 
-     <!-- fenge -->
-     <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/omnispatial.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models
-          </span>
-        <br>
-        <a href="">Mengdi Jia</a>*,
-        <a href="https://qizekun.github.io">Zekun Qi</a>*,
-        <a href="">Shaochen Zhang</a>,
-        <a href="">Wenyao Zhang</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="https://jiaweihe.com">Jiawei He</a>,
-        <a href="https://hughw19.github.io/">He Wang</a>,
-        <a href="https://ericyi.github.io/">Li Yi</a>
-        <br>
-        <em>Under review</em>
-        <br>
-        <a href="https://qizekun.github.io/omnispatial/">project page</a> /
-        <a href="https://arxiv.org/abs/2506.03135">arXiv</a> /
-        <a href="https://github.com/qizekun/OmniSpatial">code</a> /
-        <a href="https://huggingface.co/datasets/qizekun/OmniSpatial">huggingface</a>
-        <p></p>
-      </td>
-    </tr>
+    <section>
+      <h2>Honors and Awards</h2>
+      <div class="awards">
+        <div class="award">
+          <b>China National Scholarship</b>
+          <span>Top <span class="hot">0.2%</span></span>
+        </div>
+        <div class="award">
+          <b>First-Class College Scholarship</b>
+          <span>University of Chinese Academy of Sciences</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- fenge -->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/Springer_2023_survey.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation
-          </span>
-        <br>
-        <a href="https://winycg.github.io">Chuanguang Yang</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">Zhulin An</a>,
-        <a href="">Yongjun Xu</a>
-        <br>
-        <em>Advancements in Knowledge Distillation: Towards New Horizons of Intelligent Systems</i> (Springer Book Chapter)</em>, <font color="red">Invited by IEEE Fellow Shyi-Ming Chen;Editors: Witold Pedrycz, Shyi-Ming Chen;
-published by Springer Cham</font>
-        <br>
-        <a href="https://arxiv.org/pdf/2306.10687.pdf">arXiv</a> / 
-		  <a href="https://link.springer.com/book/10.1007/978-3-031-32095-8">book</a>
-        <p></p>
-      </td>
-    </tr>
-    <!-- fenge -->
-    
-    <!-- fenge -->
-    <tr class="paper-row">
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/CLIP_KD.jpg' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            CLIP-KD: An Empirical Study of CLIP Model Distillation
-          </span>
-        <br>
-        <a href="https://winycg.github.io">Chuanguang Yang</a>,
-        <a href="">Zhulin An</a>,
-        <a href="">Libo Huang</a>,
-        <a href="">Junyu Bi</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">Han Yang</a>,
-        <a href="">Boyu Diao</a>,
-        <a href="">Yongjun Xu</a>
-        <br>
-        <em>CVPR</em>, 2024
-        <br>
-        <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_CLIP-KD_An_Empirical_Study_of_CLIP_Model_Distillation_CVPR_2024_paper.pdf">paper</a>,
-        <a href="https://github.com/winycg/CLIP-KD">Code</a>
-        <p></p>
-      </td>
-    </tr>
-    <!-- fenge -->
-    
-    <!-- fenge -->
-    <tr>
-      <td style="padding:10px;width:30%;vertical-align:middle">
-        <img src='images/IL.png' width="100%">
-      </td>
-      <td style="padding:20px;width:70%;vertical-align:middle">
-          <span class="papertitle">
-            Exemplar-Free Class Incremental Learning via Incremental Representation
-          </span>
-        <br>
-        <a href="">Libo Huang</a>,
-        <a href="">Zhulin An</a>,
-        <a href="">Yan Zeng</a>,
-        <a href="">Chuanguang Yang</a>,
-        <strong>Xinqiang Yu</strong>,
-        <a href="">Yongjun Xu</a>
-        <br>
-        <br>
-        <a href="https://arxiv.org/pdf/2403.16221">paper</a>
-        <p></p>
-      </td>
-    </tr>
-    <!-- fenge -->
-
-
-        </tbody></table>
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <h2>Honors and Awards</h2>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="10"><tbody>
-          <tr>
-            <td width="80%" valign="center">
-              <b>China National Scholarship</b> / <font color="red">  0.2%</font>
-            </td>
-          </tr>
-          <tr>
-            <td width="80%" valign="center">
-              <b>First-Class College Scholarship</b> / <front>University of Chinese Academy of Sciences</front>
-            </td>
-          </tr>
-
-        </tbody></table>
-
-
-		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-              Visitors: <span id="busuanzi_value_site_uv">--</span>
-              <br>
-              Page views: <span id="busuanzi_value_site_pv">--</span>
-              <br>
-              Template stolen from <a href="https://jonbarron.info/">Jon Barron</a>.
-              <br> Last updated: July 23, 2026
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <footer>
+      Visitors: <span id="busuanzi_value_site_uv">--</span> ·
+      Page views: <span id="busuanzi_value_site_pv">--</span><br>
+      Last updated: September 11, 2026
+    </footer>
+  </div>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-

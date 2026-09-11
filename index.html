@@ -23,15 +23,11 @@
         <div class="contacts">
           <a class="chip" href="https://scholar.google.com/citations?user=sD_nRaoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
           <a class="chip" href="https://github.com/XinQIangYU" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" href="#wechat">WeChat</a>
+          <button class="chip" type="button" id="wechat-open">WeChat</button>
         </div>
       </div>
       <aside class="portrait">
         <a href="images/me.jpg"><img class="me" src="images/me.jpg" alt="Portrait of Xinqiang Yu"></a>
-        <div class="wechat-card" id="wechat">
-          <img src="images/wechat.jpg" alt="WeChat QR code of Xinqiang Yu">
-          <span>Scan to add me on WeChat</span>
-        </div>
       </aside>
     </header>
 
@@ -249,6 +245,33 @@
       Last updated: September 11, 2026
     </footer>
   </div>
+
+  <div class="wechat-modal" id="wechat-modal" hidden>
+    <div class="wechat-dialog" role="dialog" aria-modal="true" aria-labelledby="wechat-title">
+      <button class="wechat-close" type="button" id="wechat-close" aria-label="Close">×</button>
+      <p id="wechat-title">WeChat</p>
+      <img src="images/wechat.jpg" alt="WeChat QR code of Xinqiang Yu">
+      <span>Scan to add me on WeChat</span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var modal = document.getElementById("wechat-modal");
+      var openBtn = document.getElementById("wechat-open");
+      var closeBtn = document.getElementById("wechat-close");
+      function openModal() { modal.hidden = false; }
+      function closeModal() { modal.hidden = true; }
+      openBtn.addEventListener("click", openModal);
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeModal();
+      });
+    })();
+  </script>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>

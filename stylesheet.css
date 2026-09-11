@@ -58,7 +58,7 @@ a:hover {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 220px;
   gap: 28px;
-  align-items: start;
+  align-items: center;
   background: var(--card);
   border: 1px solid var(--line);
   border-top: 3px solid var(--link);

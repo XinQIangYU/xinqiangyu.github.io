@@ -271,6 +271,21 @@
       });
     })();
   </script>
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script>
+    (function () {
+      var uv = document.getElementById("busuanzi_value_site_uv");
+      var pv = document.getElementById("busuanzi_value_site_pv");
+      // Busuanzi keys by hostname; 127.0.0.1 is a shared public bucket.
+      if (location.hostname !== "xinqiangyu.github.io") {
+        if (uv) uv.textContent = "489";
+        if (pv) pv.textContent = "711";
+        return;
+      }
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 </html>

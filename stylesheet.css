@@ -252,6 +252,59 @@ h2::after {
   transform: translateY(-1px);
 }
 
+.paper-featured {
+  background: linear-gradient(180deg, #fff6e8 0%, #fffdf8 48%);
+  border-color: #e4cb90;
+  box-shadow: inset 3px 0 0 #c8963e;
+}
+
+.paper-featured:hover {
+  box-shadow: inset 3px 0 0 #c8963e, 0 12px 26px var(--shadow);
+}
+
+.honor-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0 4px;
+}
+
+.honor {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 9px 2px 7px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.honor svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+.honor-best {
+  color: #8a5a12;
+  background: linear-gradient(180deg, #fff7e4, #f6e4bc);
+  border: 1px solid #e4cd96;
+}
+
+.honor-popular {
+  color: #9b1d2e;
+  background: linear-gradient(180deg, #fff3ef, #fde3da);
+  border: 1px solid #f0c7bb;
+}
+
+.honor-note {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .paper img.thumb {
   width: 100%;
   aspect-ratio: 16 / 10;

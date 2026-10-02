@@ -189,7 +189,7 @@
 
     <section>
       <h2>Results</h2>
-      <p>Closed-loop comparison on 239 CARLA trajectories. Correction success is the fraction of deviations the policy brings back inside the safety margin.</p>
+      <p>Closed-loop comparison on 239 CARLA evaluation routes. CityWalker, ViNT, NaVid, and NaVILA are fine-tuned on the same ReDA training split. Correction success is the fraction of deviations the policy brings back inside the safety margin.</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -201,14 +201,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>CityWalker</td><td>38.08</td><td>37.48</td><td>30.73</td></tr>
-            <tr><td>ViNT</td><td>51.88</td><td>51.33</td><td>23.54</td></tr>
-            <tr><td>NaVid</td><td>20.50</td><td>20.50</td><td>4.89</td></tr>
-            <tr><td>NaVILA</td><td>22.59</td><td>22.59</td><td>4.90</td></tr>
+            <tr><td>CityWalker<sup>&dagger;</sup></td><td>41.42</td><td>41.33</td><td>36.93</td></tr>
+            <tr><td>ViNT<sup>&dagger;</sup></td><td>52.72</td><td>52.00</td><td>44.65</td></tr>
+            <tr><td>NaVid<sup>&dagger;</sup></td><td>17.99</td><td>17.99</td><td>19.71</td></tr>
+            <tr><td>NaVILA<sup>&dagger;</sup></td><td>22.18</td><td>22.18</td><td>15.28</td></tr>
+            <tr><td>Zero-shot Qwen2.5-VL</td><td>11.30</td><td>11.30</td><td>42.76</td></tr>
             <tr class="ours"><td>DA-Nav (ours)</td><td class="best">59.00</td><td class="best">58.66</td><td class="best">98.15</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="note"><sup>&dagger;</sup> Fine-tuned on ReDA, keeping each baseline’s own architecture and objective. Qwen2.5-VL uses its official weights without that fine-tuning.</p>
       <p class="note">Outdoors, over 30 trials in streets and parks, DA-Nav reaches 46.7% success and 76.3% route completion. CityWalker and ViNT reach 23.3% and 16.7% success under the same protocol.</p>
     </section>
 

@@ -12,15 +12,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,560;8..60,650&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <main class="wrap">
-    <nav class="topnav">
-      <a href="https://xinqiangyu.github.io/">Xinqiang Yu</a>
-      <span>IEEE RA-L</span>
-    </nav>
-
     <header>
       <div class="badge">IEEE RA-L</div>
       <h1 class="title">DA-Nav</h1>
@@ -51,7 +46,6 @@
       </p>
       <div class="links">
         <a class="btn" href="https://arxiv.org/pdf/2607.11638" target="_blank" rel="noopener">Paper</a>
-        <a class="btn" href="DA-Nav.pdf">PDF</a>
         <a class="btn" href="#videos">Videos</a>
         <a class="btn" href="#bibtex">BibTeX</a>
       </div>
@@ -68,6 +62,71 @@
         City-scale outdoor navigation usually depends on dense maps or expensive, finely annotated trajectories. DA-Nav instead uses the sparse directions already produced by commercial navigation tools, such as “turn left in 50 meters.” The policy treats navigation as discrete spatial grounding on the egocentric image: a vision-language model first checks whether the robot has left the path, then chooses a corrective action, and finally selects a short sequence of grid targets. Trained on ReDA, which pairs direction-aware instructions with recovery trajectories, DA-Nav reaches 59.0% success in CARLA and keeps a 98.15% correction success rate. Without fine-tuning, it runs closed-loop on a Unitree Go2 and a Leju Kuavo humanoid for kilometer-scale routes outdoors.
         <div class="kws"><b>Keywords:</b> Vision-Language Navigation &middot; Trajectory Recovery &middot; Sim-to-Real</div>
       </div>
+    </section>
+
+    <section id="dataset">
+      <h2>ReDA Dataset</h2>
+      <p class="lead">A direction-aware training set: the same sparse instructions a phone map already gives, plus the recovery after the robot leaves the path.</p>
+      <div class="split">
+        <figure class="shot">
+          <img src="assets/reda.jpg?v=1" alt="ReDA routes over a city map, with egocentric frames, 286K frames, 2102 trajectories, 128K recovery samples, and 126 scenes">
+        </figure>
+        <div class="copy">
+          <p>ReDA is collected automatically in CARLA. A controller follows the expert route, then a steering perturbation pushes the robot aside. Once the lateral error passes 0.35 m, the logger records the way back and drops the unstable frames in between. Each kept frame carries a chain-of-thought label: whether the robot has left the path, which action corrects it, and the next six targets on the egocentric grid.</p>
+          <p>The instructions stay coarse on purpose: forward, turn left, turn right, or stop. That is what commercial navigation already outputs, and it is what the policy is trained to ground.</p>
+          <div class="stats compact">
+            <div class="stat"><b>126</b><span>scenes</span></div>
+            <div class="stat"><b>2,102</b><span>trajectories</span></div>
+            <div class="stat"><b>286K</b><span>frames, 158K expert</span></div>
+            <div class="stat"><b>128K</b><span>recovery frames</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Instruction</th>
+              <th>Action space</th>
+              <th>Supervision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Touchdown</td><td>Fine-grained language</td><td>Graph nodes</td><td>Expert only</td></tr>
+            <tr><td>CityWalker</td><td>Path-level</td><td>3D waypoints</td><td>Expert only</td></tr>
+            <tr><td>NaVid / NaVILA</td><td>Path-level / mixed</td><td>Discrete commands</td><td>Expert only</td></tr>
+            <tr class="ours"><td>ReDA (ours)</td><td class="best">Direction-based</td><td class="best">2D image grid</td><td class="best">Expert + recovery</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="method">
+      <h2>Method</h2>
+      <p class="lead">DA-Nav is a LoRA-finetuned Qwen2.5-VL-7B. It reads the recent view and a direction, then writes a short chain of thought as cells on the image.</p>
+      <figure class="shot">
+        <img src="assets/architecture.jpg?v=1" alt="DA-Nav architecture: frozen vision encoder and text embedder, Qwen2.5-VL-7B with LoRA, and a chain-of-thought output of state, action, and grid targets">
+        <figcaption>Two seconds of egocentric frames and a direction token. The vision encoder and text embedder stay frozen; LoRA adapts the backbone. The answer is a state, an action, and six grid cells.</figcaption>
+      </figure>
+      <div class="grid steps">
+        <div class="card">
+          <h3><span class="num">1</span> Deviation</h3>
+          <p>First the model says whether the robot is still on the reference path: yes or no.</p>
+        </div>
+        <div class="card">
+          <h3><span class="num">2</span> Action</h3>
+          <p>Then it picks a command: forward, turn left or right, correct left or right, or stop.</p>
+        </div>
+        <div class="card">
+          <h3><span class="num">3</span> Grid targets</h3>
+          <p>Last, it selects six cells for the next three seconds, sampled at 2 Hz on the image plane.</p>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/grounding.jpg?v=1" alt="Egocentric image grid with predicted trajectory cells, and the same targets lifted into the robot body frame">
+        <figcaption>The ground in front of the robot is a grid, rows 13–23 and columns 0–28. Red cells are the predicted targets. They are lifted into the body frame and tracked by a furthest-point controller, so the slower model step does not twitch the steering.</figcaption>
+      </figure>
     </section>
 
     <section id="videos">

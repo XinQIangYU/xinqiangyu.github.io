@@ -31,17 +31,6 @@ a:hover { text-decoration: underline; }
   padding: 36px 22px 72px;
 }
 
-.topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 28px;
-  font-size: 14.5px;
-  color: var(--muted);
-}
-
-.topnav a { font-weight: 600; }
-
 header { text-align: center; }
 
 .badge {
@@ -114,7 +103,7 @@ h1.title {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #0e141b;
+  background: #fff;
   display: block;
 }
 
@@ -122,6 +111,68 @@ h1.title {
   color: var(--muted);
   font-size: 14.5px;
   margin: 10px 0 0;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: start;
+}
+
+#dataset .lead,
+#method .lead {
+  max-width: none;
+}
+
+.copy p {
+  margin: 0 0 14px;
+}
+
+.shot {
+  margin: 16px 0 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.split .shot { margin: 0; }
+
+.shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.shot figcaption {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 10px 2px 2px;
+  line-height: 1.5;
+}
+
+.stats.compact {
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+}
+
+.shot + .grid { margin-top: 14px; }
+
+.num {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: 1px;
 }
 
 section { margin-top: 48px; }
@@ -266,7 +317,7 @@ footer {
 }
 
 @media (max-width: 860px) {
-  .videos, .grid { grid-template-columns: 1fr; }
+  .videos, .grid, .split { grid-template-columns: 1fr; }
   .stage { height: auto; }
   .stage video { width: 100%; max-height: 70vh; }
   .stats { grid-template-columns: 1fr 1fr; }

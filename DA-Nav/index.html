@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DA-Nav: Direction-Aware City-Scale Vision-Language Navigation</title>
+  <meta name="description" content="DA-Nav grounds coarse directions from commercial maps into image-plane targets, and recovers from trajectory drift for kilometer-scale outdoor navigation.">
+  <meta property="og:title" content="DA-Nav">
+  <meta property="og:description" content="Direction-aware city-scale vision-language navigation, zero-shot on quadruped and humanoid robots.">
+  <meta property="og:image" content="assets/teaser.png">
+  <link rel="icon" href="assets/teaser.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,560;8..60,650&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="topnav">
+      <a href="https://xinqiangyu.github.io/">Xinqiang Yu</a>
+      <span>IEEE RA-L</span>
+    </nav>
+
+    <header>
+      <div class="badge">IEEE RA-L</div>
+      <h1 class="title">DA-Nav</h1>
+      <p class="subtitle">Direction-Aware City-Scale Vision-Language Navigation</p>
+      <div class="authors">
+        <div class="author-line">
+          Ye Yuan<sup>1,4,5,*</sup>,
+          Kehan Chen<sup>2,3,*</sup>,
+          <a href="https://xinqiangyu.github.io">Xinqiang Yu</a><sup>2,3,*</sup>,
+          Wentao Xu<sup>1,4</sup>,
+          Heng Wang<sup>5</sup>,
+          Libo Huang<sup>4</sup>
+        </div>
+        <div class="author-line">
+          <a href="https://winycg.github.io">Chuanguang Yang</a><sup>4</sup>,
+          Yan Huang<sup>2</sup>,
+          <a href="https://jiaweihe.com">Jiawei He</a><sup>5,&dagger;</sup>,
+          <a href="https://oldoc.github.io">Zhulin An</a><sup>4,&dagger;</sup>
+        </div>
+      </div>
+      <p class="equal">* equal contribution &nbsp;&nbsp; &dagger; corresponding authors</p>
+      <p class="affils">
+        <sup>1</sup> ShanghaiTech University &nbsp;
+        <sup>2</sup> NLPR, Institute of Automation, CAS &nbsp;
+        <sup>3</sup> University of Chinese Academy of Sciences<br>
+        <sup>4</sup> Institute of Computing Technology, CAS &nbsp;
+        <sup>5</sup> XYZ Embodied AI
+      </p>
+      <div class="links">
+        <a class="btn" href="https://arxiv.org/pdf/2607.11638" target="_blank" rel="noopener">Paper</a>
+        <a class="btn" href="DA-Nav.pdf">PDF</a>
+        <a class="btn" href="#videos">Videos</a>
+        <a class="btn" href="#bibtex">BibTeX</a>
+      </div>
+    </header>
+
+    <img class="teaser" src="assets/teaser.png" alt="DA-Nav overview: ReDA data, direction-aware reasoning, and real-world quadruped and humanoid deployment">
+    <p class="caption">
+      DA-Nav turns a coarse commercial-map direction into a local target on the egocentric image, then recovers when the robot drifts. The same policy transfers, without real-world fine-tuning, to a quadruped and a humanoid.
+    </p>
+
+    <section>
+      <h2>Abstract</h2>
+      <div class="abstract">
+        City-scale outdoor navigation usually depends on dense maps or expensive, finely annotated trajectories. DA-Nav instead uses the sparse directions already produced by commercial navigation tools, such as “turn left in 50 meters.” The policy treats navigation as discrete spatial grounding on the egocentric image: a vision-language model first checks whether the robot has left the path, then chooses a corrective action, and finally selects a short sequence of grid targets. Trained on ReDA, which pairs direction-aware instructions with recovery trajectories, DA-Nav reaches 59.0% success in CARLA and keeps a 98.15% correction success rate. Without fine-tuning, it runs closed-loop on a Unitree Go2 and a Leju Kuavo humanoid for kilometer-scale routes outdoors.
+        <div class="kws"><b>Keywords:</b> Vision-Language Navigation &middot; Trajectory Recovery &middot; Sim-to-Real</div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>Real-World Deployment</h2>
+      <p class="lead">Zero-shot closed-loop runs. A phone navigation app supplies the direction; the robot only sees egocentric RGB.</p>
+      <div class="videos">
+        <article class="video-card">
+          <div class="stage">
+            <video controls preload="metadata" playsinline poster="assets/poster-quadruped.jpg">
+              <source src="videos/quadruped-park.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Quadruped, Olympic Forest Park</h3>
+          <p>A Unitree Go2 follows live map directions across a crowded plaza and into the park greenway, including long straight segments and upcoming turns.</p>
+        </article>
+        <article class="video-card">
+          <div class="stage">
+            <video controls preload="metadata" playsinline poster="assets/poster-humanoid-park.jpg">
+              <source src="videos/humanoid-park.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Humanoid, Park</h3>
+          <p>The same policy, with no real-world fine-tuning, walks a Leju humanoid through an outdoor park route, from open plazas onto the surrounding streets.</p>
+        </article>
+        <article class="video-card">
+          <div class="stage">
+            <video controls preload="metadata" playsinline poster="assets/poster-humanoid-campus.jpg">
+              <source src="videos/humanoid-campus.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Humanoid, Campus</h3>
+          <p>Closed-loop walking along a campus sidewalk and road, holding the route through building frontage and marked turns.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Highlights</h2>
+      <div class="stats">
+        <div class="stat"><b>59.0%</b><span>simulation success</span></div>
+        <div class="stat"><b>98.15%</b><span>correction success</span></div>
+        <div class="stat"><b>46.7%</b><span>real-world success</span></div>
+        <div class="stat"><b>1.2 km</b><span>zero-shot outdoors</span></div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Directions, not dense maps</h3>
+          <p>Commercial navigation tools already plan the global route. DA-Nav only consumes a discrete local instruction: forward, turn left, turn right, or stop.</p>
+        </div>
+        <div class="card">
+          <h3>Ground, then recover</h3>
+          <p>The model reads a short image history, decides whether it has drifted, and picks the next target on an egocentric grid instead of regressing 3D waypoints.</p>
+        </div>
+        <div class="card">
+          <h3>One policy, two robots</h3>
+          <p>ReDA supplies both expert and recovery trajectories in CARLA. The resulting policy transfers zero-shot to a quadruped and a humanoid.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>Closed-loop comparison on 239 CARLA trajectories. Correction success is the fraction of deviations the policy brings back inside the safety margin.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>SR (%) &uparrow;</th>
+              <th>SPL &uparrow;</th>
+              <th>CSR (%) &uparrow;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CityWalker</td><td>38.08</td><td>37.48</td><td>30.73</td></tr>
+            <tr><td>ViNT</td><td>51.88</td><td>51.33</td><td>23.54</td></tr>
+            <tr><td>NaVid</td><td>20.50</td><td>20.50</td><td>4.89</td></tr>
+            <tr><td>NaVILA</td><td>22.59</td><td>22.59</td><td>4.90</td></tr>
+            <tr class="ours"><td>DA-Nav (ours)</td><td class="best">59.00</td><td class="best">58.66</td><td class="best">98.15</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Outdoors, over 30 trials in streets and parks, DA-Nav reaches 46.7% success and 76.3% route completion. CityWalker and ViNT reach 23.3% and 16.7% success under the same protocol.</p>
+    </section>
+
+    <section id="bibtex">
+      <h2>BibTeX</h2>
+      <pre>@article{yuan2026danav,
+  title   = {DA-Nav: Direction-Aware City-Scale Vision-Language Navigation},
+  author  = {Yuan, Ye and Chen, Kehan and Yu, Xinqiang and Xu, Wentao and
+             Wang, Heng and Huang, Libo and Yang, Chuanguang and Huang, Yan and
+             He, Jiawei and An, Zhulin},
+  journal = {IEEE Robotics and Automation Letters},
+  year    = {2026},
+  note    = {arXiv:2607.11638}
+}</pre>
+    </section>
+
+    <footer>Last updated October 2026.</footer>
+  </main>
+</body>
+</html>
